@@ -1,6 +1,6 @@
 import React,{ createContext,useState } from 'react';
 
-export default User = createContext({
+export const User = createContext({
     email : '',
     name : '',
     isAuthenticated : false
