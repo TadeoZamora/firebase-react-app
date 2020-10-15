@@ -3,12 +3,12 @@ import LoginHook from '../hooks/LoginHook';
 import '../Login.css'
 const Login = () => {
     const [ register, setRegister ] = useState(false)
-    const {user, setUserData,signup} = LoginHook()
+    const {user, setUserData, signUp, logIn} = LoginHook()
     return (
             <div className="row">
                 <div className="col-sm-6 login-section-wrapper">
                     <div className="brand-wrapper">
-                    </div>
+                    </div>  
                     <div className="login-wrapper my-auto">
                         <h1 className="login-title">{ register ? 'Sign Up' : 'Log in'}</h1>
                             <div className="form-group">
@@ -41,7 +41,7 @@ const Login = () => {
                                         name="signup"
                                         id="signup"
                                         className="btn btn-block login-btn"
-                                        onClick={ signup }
+                                        onClick={ signUp }
                                         >
                                             Signup
                                         </button> 
@@ -50,7 +50,9 @@ const Login = () => {
                                         <button
                                             name="login"
                                             id="login"
-                                            className="btn btn-block login-btn">
+                                            className="btn btn-block login-btn"
+                                            onClick={logIn}
+                                            >
                                                 Login
                                             </button> 
                                         <a href="#!" className="forgot-password-link">Forgot password?</a>
