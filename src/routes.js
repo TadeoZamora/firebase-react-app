@@ -1,3 +1,4 @@
+import Home from "./pages/Home"
 import Login from "./pages/Login"
 
 var routes = [
@@ -7,6 +8,13 @@ var routes = [
         layout: '/auth',
         menu : true,
         component: Login 
+    },
+    {
+        path: '/home',
+        name: 'Home',
+        layout: '/admin',
+        menu : true,
+        component: Home 
     }
 ]
 
