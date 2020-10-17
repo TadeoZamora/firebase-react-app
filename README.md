@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto se construyo con [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Iniciar proyecto
+Despues de clonar deberas ejecutar `npm install` para instalar todas las dependencias.
 
-In the project directory, you can run:
+## DotEnv
+El proyecto requiere que se cree el siguiente archivo `.env.development.local` con las variables de entorno para trabajar en desarrollo, basandose en el achivo `env.example`
 
-### `npm start`
+## Arrancar el servidor
+`npm start` se levantara un servidor local sobre `localhost:3000` por default.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Producción
+Para levantar el proyecto a produccion, primero se debe crear el archivo `.env.production.local` con las variables de entorno que se requieren en produccion y despues construir la carpeta de `build` que contendra el codigo transpilado con el comando `npm run build`.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Estructuración del proyecto
+A continuacion se describen cada una de las carpetas dentro del nivel de `src`
 
-### `npm test`
+### Pages
+Esta carpeta debera contener los componentes que son a nivel superior, especificamente como si se trataran de páginas.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Components
+La carpeta components debera contener aquellas estructuras de codigo que seran reutilizables y que su logica puede estar separada sin afectar a un componente padre o contenedor.
 
-### `npm run build`
+### Constants
+Contiene todas aquellas variables constantes que no cambiaran en el proyecto.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Services
+Contiene todos los servicios/funciones que pueden ser utilizados en el proyecto por ejemplo `axios`.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Routes
+Contiene todas las rutas del sistema, se debe especificar los atributos que contiene cada ruta para evaluar el reenderizado.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Hooks
+Contiene todos aquellos Hooks personalizados que pueden estar separados de cada componente, esto le da mayor autonomia al desarrollador para tener una mejor estructura en cuanto logica y componente.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
