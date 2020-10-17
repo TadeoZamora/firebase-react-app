@@ -1,5 +1,6 @@
 import Home from "./pages/Home"
 import Login from "./pages/Login"
+import Panel from "./pages/Panel"
 
 var routes = [
     {
@@ -15,6 +16,13 @@ var routes = [
         layout: '/admin',
         menu : true,
         component: Home 
+    },
+    {
+        path: '/panel',
+        name: 'Panel',
+        layout: '/admin',
+        menu : true,
+        component: Panel 
     }
 ]
 

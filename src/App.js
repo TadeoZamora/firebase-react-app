@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import AuthLayout from './layouts/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.css'
 import UserContext from './context/UserContext';
 import AdminLayout from './layouts/Admin';
 

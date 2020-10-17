@@ -23,10 +23,14 @@ const UserContext = ({...props}) => {
         //this observable is listening avery change with the user authentication data
         //if the user signout, this observable will return null
         firebase.auth().onAuthStateChanged(userData => {
-            console.log('[User]',user.isAuthenticated)
+            console.log('[User]',userData)
             if (userData !== null) {
                 setUser({
                     ...user,  isAuthenticated : true
+                })
+            }else{
+                setUser({
+                    ...user,  isAuthenticated : false
                 })
             }
             setLoading(false)
